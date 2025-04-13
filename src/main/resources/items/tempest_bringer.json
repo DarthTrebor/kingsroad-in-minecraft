@@ -1,0 +1,79 @@
+{
+  "prefix": "Tempestbringer",
+  "set_name": "Tempest Armament",
+  "event_name": "The Doombringer Event",
+  "set_color": "LIGHT_PURPLE",
+  "items": {
+    "helmet": {
+      "type": "netherite",
+      "attributes": {
+        "health": "100",
+        "armor": "50",
+        "critChance": "5",
+        "dodgeChance": "5"
+      }
+    },
+    "chestplate": {
+      "type": "netherite",
+      "attributes": {
+        "health": "100",
+        "armor": "50",
+        "critChance": "5",
+        "dodgeChance": "5"
+      }
+    },
+    "leggings": {
+      "type": "netherite",
+      "attributes": {
+        "health": "100",
+        "armor": "50",
+        "critChance": "5",
+        "dodgeChance": "5"
+      }
+    },
+    "boots": {
+      "type": "netherite",
+      "attributes": {
+        "health": "100",
+        "armor": "50",
+        "critChance": "5",
+        "dodgeChance": "5"
+      }
+    },
+    "sword": {
+      "type": "netherite",
+      "attributes": {
+        "damage": "50",
+        "critChance": "15",
+        "critDamage": "15",
+        "manaRegen": "0.5"
+      }
+    },
+    "shield": {
+      "attributes": {
+        "armor": "100",
+        "dodgeChance": "5"
+      }
+    },
+    "bow": {
+      "attributes": {
+        "damage": "50",
+        "critChance": "15",
+        "critDamage": "15",
+        "manaRegen": "0.5"
+      }
+    }
+  },
+  "set_bonuses": {
+    "at_2": {
+      "critChance": "5"
+    },
+    "at_3": {
+      "health": "100"
+    },
+    "at_4": {
+      "damage": 10
+    },
+    "at_6": "Ignition"
+  }
+}

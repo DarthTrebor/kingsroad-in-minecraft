@@ -1,0 +1,53 @@
+plugins {
+    id 'java'
+    id 'idea' // IntelliJ IDEA project support
+}
+
+group = 'org.example'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    // Spigot repository for the latest APIs
+    maven { url = uri('https://hub.spigotmc.org/nexus/content/repositories/public/') }
+    // ProtocolLib repository
+    maven { url = uri('https://repo.dmulloy2.net/repository/public/') }
+    // LuckPerms repository
+    maven { url = uri('https://repo.luckperms.net') }
+    maven { url = uri('https://repo.extendedclip.com/content/repositories/placeholderapi/') }
+}
+
+dependencies {
+    // Spigot API for 1.19
+    compileOnly 'org.spigotmc:spigot-api:1.19.4-R0.1-SNAPSHOT'
+
+    // ProtocolLib
+    compileOnly 'com.comphenix.protocol:ProtocolLib:5.0.0'
+    compileOnly 'me.clip:placeholderapi:2.11.6'
+    // LuckPerms API
+    compileOnly 'net.luckperms:api:5.4'
+
+    // Annotations for nullability
+    implementation 'org.jetbrains:annotations:24.0.1'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    sourceCompatibility = '17' // Java version for modern Minecraft versions
+    targetCompatibility = '17'
+}
+
+jar {
+    archiveBaseName = 'KingsRoad'
+    archiveVersion = version
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.Main' // Replace with your plugin's main class path
+        )
+    }
+
+    // Exclude dependencies from being bundled in the JAR
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

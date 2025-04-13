@@ -1,0 +1,13 @@
+name: KingsRoad
+main: org.example.Main
+version: 1.0
+author: YourName
+description: A plugin for the KingsRoad server
+api-version: 1.19
+softdepend: [PlaceholderAPI]
+
+commands:
+  krd:
+    description: Main command for KingsRoad plugin
+    usage: /krd <subcommand>
+    aliases: [kingsroad]
